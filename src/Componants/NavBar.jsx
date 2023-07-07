@@ -4,7 +4,7 @@ import logo from "../Assets/logo.json";
 
 const NavBar = () => {
   return (
-    <div className="bg-gray-800  py-3 rounded-lg">
+    <div className="bg-gray-800  py-3 rounded-b-xl">
       <ul className="flex flex-row justify-around items-center">
         <div className="flex items-center gap-2">
           <li className="h-14 w-14">
