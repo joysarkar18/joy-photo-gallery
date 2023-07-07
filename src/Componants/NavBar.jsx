@@ -4,10 +4,10 @@ import logo from "../Assets/logo.json";
 
 const NavBar = () => {
   return (
-    <div className="bg-gray-900  py-4 rounded-lg">
+    <div className="bg-gray-800  py-3 rounded-lg">
       <ul className="flex flex-row justify-around items-center">
         <div className="flex items-center gap-2">
-          <li className="h-10 w-10">
+          <li className="h-14 w-14">
             <Lottie animationData={logo} height={100} width={100}></Lottie>
           </li>
 
@@ -43,8 +43,8 @@ const NavBar = () => {
               <input
                 type="search"
                 id="default-search"
-                class="block w-60 md:w-96 p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Search Photos..."
+                class="block w-60 md:w-96 p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-900 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Search Images..."
                 required
               />
               <button
