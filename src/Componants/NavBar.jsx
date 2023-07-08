@@ -1,12 +1,33 @@
 import React from "react";
 import Lottie from "lottie-react";
 import logo from "../Assets/logo.json";
+import { createClient } from 'pexels';
 
-const NavBar = () => {
+
+const NavBar = (props) => {
+
+
+  const queryChangeHandeler = (event)=>{
+    
+      props.setQuery(event.target.value);
+    
+   
+
+  }
+
+  const onSubmitHandeler = (event) => {
+    event.preventDefault();
+    if(props.query!=""){
+      props.setPhotoList();
+    } 
+
+  }
   return (
     <div className="bg-gray-800  py-3 rounded-b-xl">
-      <ul className="flex flex-row justify-around items-center">
-        <div className="flex items-center gap-2">
+      <ul className="flex flex-row justify-around items-center cursor-pointer">
+        <div onClick={()=>{
+          window.location.reload();
+        }}   className="flex items-center gap-2">
           <li className="h-14 w-14">
             <Lottie animationData={logo} height={100} width={100}></Lottie>
           </li>
@@ -41,6 +62,8 @@ const NavBar = () => {
                 </svg>
               </div>
               <input
+              value={props.query}
+                onChange={queryChangeHandeler}
                 type="search"
                 id="default-search"
                 class="block w-60 md:w-96 p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-900 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -48,6 +71,7 @@ const NavBar = () => {
                 required
               />
               <button
+              onClick={onSubmitHandeler}
                 type="submit"
                 class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >

@@ -3,7 +3,7 @@ import { HiOutlineDownload } from "react-icons/hi";
 
 const Card = (props) => {
   return (
-    <div class="max-w-sm h-34 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mb-3 hover:scale-105 duration-200">
+    <div key={props.id + Math.floor(Math.random() * 1000)} id={props.id} class="max-w-sm h-34 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mb-3 hover:scale-105 duration-200">
       <div className="group relative">
         <img class="rounded-lg" src={props.link} alt="" />
 
