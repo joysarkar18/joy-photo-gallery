@@ -35,7 +35,7 @@ function App() {
   useEffect(()=>{  
     try {
       
-      client.photos.curated({ per_page: 5 ,page:pageNo }).then(photosOb => {
+      client.photos.curated({ per_page: 10 ,page:pageNo }).then(photosOb => {
         setPhotos((prev) => [...photosOb.photos] );
         setLoading(false);
         setPageNo((prev) => prev+1)
