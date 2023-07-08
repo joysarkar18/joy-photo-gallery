@@ -10,7 +10,7 @@ const client = createClient('ZSjOnt4sEf56eVz9tcFPA1yXDQ4RubPeAdrVfeCowG2trYS2vFE
 
 function App() {
   const [photoList , setPhotos] = useState([]);
-  const [pageNo , setPageNo] = useState(Math.floor(Math.random() * 1000));
+  const [pageNo , setPageNo] = useState(Math.floor(Math.random() * 500));
   const [sPage , setSpage] = useState(1);
   const [query , setQuery] = useState("");
   const [loading , setLoading] = useState(true);
@@ -50,7 +50,7 @@ function App() {
   useEffect(()=>{
     try {
       if(query===""){
-        client.photos.curated({ per_page: 0 ,page:pageNo }).then(photosOb => {
+        client.photos.curated({ per_page: 1 ,page:pageNo }).then(photosOb => {
           setPhotos((prev) => [ ...prev , ...photosOb.photos] );
           setLoading(false);
         });
@@ -86,6 +86,7 @@ function App() {
 
 
   return (
+    console.log(photoList),
    
 
     
@@ -99,7 +100,7 @@ function App() {
           <h1 className="text-white h-screen text-center flex justify-center items-center">Loading...</h1>
         </div>: photoList.map((photo)=>{
           return (
-            <Card key = {photo.id} link = {photo.src.large} ></Card>
+            <Card key = {photo.id} link = {photo.src.large}  downloadLink = {photo.src.large2x} ></Card>
           )
         })}
         

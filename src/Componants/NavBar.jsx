@@ -32,7 +32,7 @@ const NavBar = (props) => {
             <Lottie animationData={logo} height={100} width={100}></Lottie>
           </li>
 
-          <p className="text-white text-xl font-anton font-bold">PIX</p>
+          <p className="text-white text-xl font-anton font-medium">PIX_JOY</p>
         </div>
 
         <li>
