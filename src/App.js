@@ -19,7 +19,7 @@ function App() {
   
   const handleScrollEvent = () =>{
     try {
-      if((window.innerHeight + document.documentElement.scrollTop + 5) >= document.documentElement.scrollHeight){
+      if((window.innerHeight + document.documentElement.scrollTop + 6) >= document.documentElement.scrollHeight){
         setPageNo((prev) => prev+1);
         setSpage((prev) => prev+1);
       }
