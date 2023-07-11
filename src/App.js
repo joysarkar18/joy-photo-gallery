@@ -2,7 +2,6 @@ import Card from "./Componants/Card";
 import NavBar from "./Componants/NavBar";
 import { createClient } from 'pexels';
 import { useEffect , useState } from "react";
-
 const client = createClient('ZSjOnt4sEf56eVz9tcFPA1yXDQ4RubPeAdrVfeCowG2trYS2vFEhr8UE');
 
 
@@ -10,7 +9,7 @@ const client = createClient('ZSjOnt4sEf56eVz9tcFPA1yXDQ4RubPeAdrVfeCowG2trYS2vFE
 
 function App() {
   const [photoList , setPhotos] = useState([]);
-  const [pageNo , setPageNo] = useState(Math.floor(Math.random() * 500));
+  const [pageNo , setPageNo] = useState(Math.floor(Math.random() * 600));
   const [sPage , setSpage] = useState(1);
   const [query , setQuery] = useState("");
   const [loading , setLoading] = useState(true);
