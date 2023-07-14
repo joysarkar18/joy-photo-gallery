@@ -9,7 +9,7 @@ const client = createClient('ZSjOnt4sEf56eVz9tcFPA1yXDQ4RubPeAdrVfeCowG2trYS2vFE
 
 function App() {
   const [photoList , setPhotos] = useState([]);
-  const [pageNo , setPageNo] = useState(Math.floor(Math.random() * 700));
+  const [pageNo , setPageNo] = useState(Math.floor(Math.random() * 800));
   const [sPage , setSpage] = useState(1);
   const [query , setQuery] = useState("");
   const [loading , setLoading] = useState(true);
